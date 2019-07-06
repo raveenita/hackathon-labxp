@@ -35,13 +35,21 @@
         font-weight: 500;
         padding-right: 25px;
         padding-left: 25px;
-    }
-    
-    .btn-forward {
-        background-color: #FFC709;
 
-        &:hover {
-            background-color: darken(#FFC709, 5%);
+        &.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus{
+            background-color: #FFC709 !important;
+        }
+
+        &.btn-forward {
+            background-color: #FFC709 !important;
+
+            &.focus{
+                background-color: #FFC709 !important;
+            }
+    
+            &:hover {
+                background-color: darken(#FFC709, 5%);
+            }
         }
     }
 }

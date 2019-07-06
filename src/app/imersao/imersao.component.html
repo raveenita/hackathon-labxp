@@ -5,7 +5,7 @@
          <div class="header__wrapper">
             <img class="header__logo" src="assets/images/logo.png" alt="Você XP">
             <div class="header__info">
-                Bom dia, {{dados.nome}}!
+                Boa tarde, {{dados.nome}}!
 
                 <span class="header__icon">
                   <img src="assets/images/icon-nuvem.svg">
@@ -28,7 +28,7 @@
                   </div>
                   <mat-tab-group [selectedIndex]="selectedIndex">
                     <mat-tab label="First">
-                      <div class="form__question"> 
+                      <div class="form__question alignMiddle"> 
                         <label class="input-label" for="name">Porque você gostaria de investir?</label>
                           <div class="input-field"> 
                               <button type="button" (click)='addClassClk($event);' class="tag">Comprar um app</button>
@@ -48,10 +48,10 @@
                     </mat-tab>
                     <mat-tab label="Second">
                         <div class="form__question"> 
-                          <label class="input-label" for="name">Ao investir o seu dinheiro, o que é mais importante?</label>
+                          <label class="input-label" for="name">O que gostaria de sentir ao investir seu dinheiro?</label>
                             <div class="input-field flexMiddle"> 
                                 <button type="button" (click)='addClassClk($event);' class="tag">Rendimento</button>
-                                <span>OU</span>
+                                <span>E / OU</span>
                                 <button type="button" (click)='addClassClk($event);' class="tag">Segurança</button>
                             </div>
                         </div> 
@@ -67,20 +67,16 @@
                         </mat-tab>
                         <mat-tab label="Fourth">
                             <div class="form__question"> 
-                              <label class="input-label" for="name">Porque você gostaria de investir?</label>
-                                <div class="input-field"> 
-                                    <button type="button" (click)='addClassClk($event);' class="tag">Comprar um app</button>
-                                    <button type="button" (click)='addClassClk($event);' class="tag">Fazer uma viagem</button>
-                                    <button type="button" (click)='addClassClk($event);' class="tag">Trocar de carro</button>
+                              <label class="input-label" for="name">Agora vamos organizar seus objetivos? Diz aí..</label>
+                                <div class="input-field flexMiddle"> 
+                                    <button type="button" (click)='addClassClk($event);' class="tagimagem tag-img1">Tenho um meta</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tagimagem tag-img2">Quero investir</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tagimagem tag-img3">Quero me sentir seguro</button>
                                 </div> 
-                                <div class="input-field"> 
-                                    <button type="button" (click)='addClassClk($event);' class="tag">Juntar uma grana</button>
-                                    <button type="button" (click)='addClassClk($event);' class="tag">Pagar um curso ou uma faculdade</button>
-                                </div>
                             </div> 
                           </mat-tab>
                           <mat-tab label="Fifth">
-                              <div class="form__question"> 
+                              <div class="form__question alignMiddle"> 
                                 <label class="input-label" for="name">Maravilhoso, quando você pensa em investir?</label>
                                 <div class="input-field"> 
                                     <button type="button" (click)='addClassClk($event);' class="tag">10 anos</button>
@@ -102,6 +98,27 @@
                                   </div>
                               </div> 
                             </mat-tab>
+                            <mat-tab label="ninith">
+                                <div class="form__question alignMiddle"> 
+                                  <label class="input-label" for="name">Ótimo! E quanto pretende investir inicialmente?</label>
+                                  <div class="input-field"> 
+                                      <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 500,00</button>
+                                      <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 1.000,00</button>
+                                      <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 2.000,00</button>
+                                  </div>  
+                                  <div class="input-field"> 
+                                        <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 5.000,00</button>
+                                        <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 20.000,00</button>
+                                        <button type="button" (click)='addClassClkOne($event);' class="tag">R$ 30.000,00</button>
+                                    </div> 
+                                </div> 
+                              </mat-tab>
+                              <mat-tab label="tenth">
+                                  <div class="form__question alignMiddle showProducts"> 
+                                    <label class="input-label finalLabel" for="name">{{dados.nome}}, <br> Veja os produtos que selecionamos para realizar seu sonho!</label>
+                                    
+                                  </div> 
+                                </mat-tab>
                   </mat-tab-group>
                   <div class="form__actions">
                       <button type='button' (click)='selectTab();' class="btn btn-forward">Avançar</button>

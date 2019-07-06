@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({ 
   selector: 'app-cadastro',
@@ -15,7 +16,8 @@ export class CadastroComponent implements OnInit {
   senha: string = "";
   senhaRevalid: string;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private dataService: DataService) { }
 
   ngOnInit() {
   }
@@ -24,6 +26,11 @@ export class CadastroComponent implements OnInit {
 
   selectTab(): void {
     if(this.selectedIndex == 6){
+      var user:Data = {
+        nome: this.nome,
+        cpf: this.cpf
+      }
+      this.dataService.insereData(user);
       this.router.navigate(['./imersao']);
     }
 

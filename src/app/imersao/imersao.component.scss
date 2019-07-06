@@ -56,10 +56,75 @@
         color: darken(#394148, 30%);
     }
 }
+
+.tagimagem {
+    margin-bottom: unset;
+    background-color: transparent;
+    color: #657687;
+    padding: unset;
+    height: 38vh;
+    width: 30vh;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color .4s, color .4s;
+
+    &:hover {
+        background-color: rgb(137, 112, 32);
+    }
+
+    border: 0;
+
+    &.clicked{
+        background-color: darken(#FFC709, 3%);
+        color: darken(#394148, 30%);
+    }
+}
+
 .flexMiddle {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 65%;
     margin: 0 auto;
+}
+
+.tag-img1{
+    background-image: url('/assets/images/flecha.png');
+}
+
+.tag-img2{
+    background-image: url('/assets/images/montanha.png');
+}
+
+.tag-img3{
+    background-image: url('/assets/images/guardachuva.png');
+}
+.form__question.alignMiddle {
+    align-items: center;
+
+    .input-field {
+        margin: 0;
+    }
+}
+
+.showProducts {
+    padding: 305px;
+    background: #ffc709;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 38;
+    width: 100%;
+    height: 80vh !important;
+
+    .input-label {
+        color: #000000;
+        font-size: 52px;
+        font-weight: 900;
+        line-height: 62px;
+    }
 }

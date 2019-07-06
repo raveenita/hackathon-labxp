@@ -9,13 +9,15 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { FormsModule }   from '@angular/forms';
 import { ImersaoComponent } from './imersao/imersao.component';
+import { FinalComponent } from './final/final.component';
 
 @NgModule({ 
   declarations: [
     AppComponent,
     CadastroComponent,
     HomeComponent,
-    ImersaoComponent
+    ImersaoComponent,
+    FinalComponent
   ],
   imports: [
     BrowserModule,

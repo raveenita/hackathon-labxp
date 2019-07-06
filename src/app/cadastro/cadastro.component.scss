@@ -1,0 +1,26 @@
+.btn {
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 20px;
+    font-family: "Roboto";
+    text-transform: none;
+    font-weight: 500;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    &.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus{
+        background-color: #FFC709 !important;
+    }
+
+    &.btn-forward {
+        background-color: #FFC709 !important;
+
+        &.focus{
+            background-color: #FFC709 !important;
+        }
+
+        &:hover {
+            background-color: darken(#FFC709, 5%);
+        }
+    }
+}

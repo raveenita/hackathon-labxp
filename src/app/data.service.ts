@@ -12,11 +12,8 @@ export class DataService {
 
   constructor() { }
 
-  insereData(nomeVar:string, cpfVar:string /* Dados em geral */){
-    this.dados = {
-      nome: nomeVar,
-      cpf: cpfVar
-    };
+  insereData(user: Data /* Dados em geral */){
+    this.dados = user;
   }
 
   retornaData(){

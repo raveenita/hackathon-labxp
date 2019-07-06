@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-imersao',
@@ -8,15 +9,27 @@ import { DataService } from '../data.service';
 })
 export class ImersaoComponent implements OnInit {
 
-  dados : Data;
+  dados : Data = {
+    nome: '',
+    cpf: ''
+  };
   selectedIndex = 0;
   renda: number;
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private router:Router) { }
 
   ngOnInit() {
     this.dados = this.dataService.retornaData();
-    if(!this.dados.nome){
-      this.dados.nome = "Maria";
+  }
+
+  addClassClkOne(val){
+    if(document.getElementsByClassName('clicked').length != 0){
+      for (let index = 0; index < document.getElementsByClassName('clicked').length; index++) {
+        document.getElementsByClassName('clicked')[index].classList.remove('clicked');
+      }
+      val.target.classList.add("clicked");
+    }else{
+      val.target.classList.add("clicked");
     }
   }
 
@@ -39,12 +52,27 @@ export class ImersaoComponent implements OnInit {
  
   selectTab(): void {
 
+    if(this.selectedIndex == 6){
+      this.router.navigate(['./final']);
+      return;
+    } 
+
+    if(this.selectedIndex == 5){
+      if(document.getElementsByClassName('clicked').length != 0){
+        this.selectedIndex += 1;
+        document.getElementsByClassName('setaVoltarCad')[0].style.opacity = "1";
+      }else{
+        alert('Está duro?');
+        return;
+      }
+    }
+
     if(this.selectedIndex == 4){
       if(document.getElementsByClassName('clicked').length != 0){
         this.selectedIndex += 1;
         document.getElementsByClassName('setaVoltarCad')[0].style.opacity = "1";
       }else{
-        alert('Opa.. Sem previsões??..');
+        alert('Opa.. Sem previsões??');
         return;
       }
     }
@@ -54,7 +82,7 @@ export class ImersaoComponent implements OnInit {
         this.selectedIndex += 1;
         document.getElementsByClassName('setaVoltarCad')[0].style.opacity = "1";
       }else{
-        alert('Opa.. Sem metas??..');
+        alert('Opa.. Sem metas??');
         return;
       }
     }
@@ -90,5 +118,6 @@ export class ImersaoComponent implements OnInit {
     }
         
   }
+  
 
 }
