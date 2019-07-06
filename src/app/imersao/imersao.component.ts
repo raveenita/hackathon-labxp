@@ -14,6 +14,9 @@ export class ImersaoComponent implements OnInit {
 
   ngOnInit() {
     this.dados = this.dataService.retornaData();
+    if(!this.dados.nome){
+      this.dados.nome = "Maria";
+    }
   }
 
 }

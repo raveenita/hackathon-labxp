@@ -1,0 +1,51 @@
+.header {
+    border-top: 11px solid #FFC709;
+
+    .header__wrapper {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        
+        .header__info {
+            font-size: 22px;
+            color: #394148;
+            display: flex;
+            align-content: center;
+        }
+
+        .header__icon {
+            margin-left: 20px;
+            
+            img {
+                width: 37px;
+            }
+        }
+    }
+}
+
+.form__actions {
+    .btn-forward {
+        background-color: #394148;
+
+        &:hover {
+            background-color: darken(#394148, 5%);
+        }
+    }
+}
+
+.tag {
+    margin-bottom: 15px;
+    background-color: #EFEFEF;
+    color: #657687;
+    padding: 18px 32px;
+    border-radius: 60px;
+    margin-right: 15px;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color .4s;
+
+    &:hover {
+        background-color: darken(#EFEFEF, 3%);
+    }
+}

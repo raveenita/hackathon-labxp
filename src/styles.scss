@@ -65,10 +65,6 @@ app-cadastro {
     .mat-tab-labels {
         display: none;
     }
-    .setaVoltarCad{
-        opacity: 0;
-        transition: opacity 0.7s;
-    }
     .mat-tab-header {
         display: none;
         overflow: hidden;
@@ -78,62 +74,77 @@ app-cadastro {
     .btn-forward {
         background-color: #FFC709;
     }
-    .form__actions {
 
-        padding: 45px 75px;
-        
-    
-        .btn {
-            font-size: 16px;
-            box-shadow: none;
-            border-radius: 20px;
-            font-family: "Roboto";
-            text-transform: none;
-            font-weight: 500;
-            padding-right: 25px;
-            padding-left: 25px;
-        }
-        
-        .btn-forward {
-            background-color: #FFC709;
-    
-            &:hover {
-                background-color: darken(#FFC709, 5%);
-            }
-        }
-    }
-    .form__question {
-
-        .input-label {
-            margin-bottom: 30px;
-        }
-    
-        .input-field {
-            & > label {
-                color: #657687;
-                font-size: 19px;  
-
-                &.active {
-                    color: #FFC709 !important;
-                }
-            }
-        }
-
-        input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:not(.browser-default), input.valid[type=text]:not(.browser-default):focus, input.valid[type=password]:not(.browser-default), input.valid[type=password]:not(.browser-default):focus, input.valid[type=email]:not(.browser-default), input.valid[type=email]:not(.browser-default):focus, input.valid[type=url]:not(.browser-default), input.valid[type=url]:not(.browser-default):focus, input.valid[type=time]:not(.browser-default), input.valid[type=time]:not(.browser-default):focus, input.valid[type=date]:not(.browser-default), input.valid[type=date]:not(.browser-default):focus, input.valid[type=datetime]:not(.browser-default), input.valid[type=datetime]:not(.browser-default):focus, input.valid[type=datetime-local]:not(.browser-default), input.valid[type=datetime-local]:not(.browser-default):focus, input.valid[type=tel]:not(.browser-default), input.valid[type=tel]:not(.browser-default):focus, input.valid[type=number]:not(.browser-default), input.valid[type=number]:not(.browser-default):focus, input.valid[type=search]:not(.browser-default), input.valid[type=search]:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown {
-            box-shadow: none !important;
-            border-bottom-color: #FFC709 !important;
-        }
-    
-        input[type] {
-            
-            border-bottom-color: #CDD6DB !important;
-    
-            &:focus, {
-                box-shadow: none !important;
-                border-bottom-color: #FFC709 !important;
-            }
-        }
-    }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.setaVoltarCad{
+    opacity: 0;
+    cursor: pointer;
+    position: fixed;
+    margin-left: -45px;
+    transition: opacity 0.7s;
+
+    &:hover {
+        opacity: .85;
+    }
+}
+
+.form__actions {
+
+    padding: 45px 75px;
+    
+
+    .btn {
+        font-size: 16px;
+        box-shadow: none;
+        border-radius: 20px;
+        font-family: "Roboto";
+        text-transform: none;
+        font-weight: 500;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+    .btn-forward {
+        background-color: #FFC709;
+
+        &:hover {
+            box-shadow: none;
+            background-color: darken(#FFC709, 5%);
+        }
+    }
+}
+.form__question {
+
+    .input-label {
+        margin-bottom: 30px;
+    }
+
+    .input-field {
+        & > label {
+            color: #657687;
+            font-size: 19px;  
+
+            &.active {
+                color: #FFC709 !important;
+            }
+        }
+    }
+
+    input.valid:not([type]), input.valid:not([type]):focus, input.valid[type=text]:not(.browser-default), input.valid[type=text]:not(.browser-default):focus, input.valid[type=password]:not(.browser-default), input.valid[type=password]:not(.browser-default):focus, input.valid[type=email]:not(.browser-default), input.valid[type=email]:not(.browser-default):focus, input.valid[type=url]:not(.browser-default), input.valid[type=url]:not(.browser-default):focus, input.valid[type=time]:not(.browser-default), input.valid[type=time]:not(.browser-default):focus, input.valid[type=date]:not(.browser-default), input.valid[type=date]:not(.browser-default):focus, input.valid[type=datetime]:not(.browser-default), input.valid[type=datetime]:not(.browser-default):focus, input.valid[type=datetime-local]:not(.browser-default), input.valid[type=datetime-local]:not(.browser-default):focus, input.valid[type=tel]:not(.browser-default), input.valid[type=tel]:not(.browser-default):focus, input.valid[type=number]:not(.browser-default), input.valid[type=number]:not(.browser-default):focus, input.valid[type=search]:not(.browser-default), input.valid[type=search]:not(.browser-default):focus, textarea.materialize-textarea.valid, textarea.materialize-textarea.valid:focus, .select-wrapper.valid>input.select-dropdown {
+        box-shadow: none !important;
+        border-bottom-color: #FFC709 !important;
+    }
+
+    input[type] {
+        
+        border-bottom-color: #CDD6DB !important;
+
+        &:focus, {
+            box-shadow: none !important;
+            border-bottom-color: #FFC709 !important;
+        }
+    }
+}

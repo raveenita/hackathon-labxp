@@ -1,3 +1,47 @@
-<p>
-  imersao works!
-</p>
+<header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+         <div class="header__wrapper">
+            <img class="header__logo" src="assets/images/logo.png" alt="Você XP">
+            <div class="header__info">
+                Bom dia, {{dados.nome}}!
+
+                <span class="header__icon">
+                  <img src="assets/images/icon-nuvem.svg">
+                </span>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="block__register">
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+              <form class="form__register">
+
+                  <div>
+                      <img (click)='selectTabMinus();' class='setaVoltarCad' src='assets/images/icon-back.svg'>
+                  </div>
+
+                  <div class="form__question"> 
+                    <label class="input-label" for="name">Queremos conhecer você. Qual seu nome?</label>
+                      <div class="input-field"> 
+                          <span class="tag">Comprar um app</span>
+                          <span class="tag">Comprar um app</span>
+                      </div>
+                  </div> 
+
+                  <div class="form__actions">
+                      <button type='button' (click)='selectTab();' class="btn btn-forward">Avançar</button>
+                    </div>
+                  
+              </form>
+          </div>
+        </div>
+    </div>
+  </section>
+
