@@ -9,7 +9,7 @@
         repeat: no-repeat;
         image: url(/assets/images/background.png);
     }
-    
+
     .block__title {
         float: right;
         padding: 10px 15px;
@@ -55,6 +55,10 @@
             color: #fff;
             font-size: 21px;
             position: relative;
+            transition: all .3s;
+            border-radius: 2px;
+            padding-bottom: 8px;
+            border-bottom: 5px solid transparent;
             
             &:first-child {
                 &:after {
@@ -67,6 +71,10 @@
             
             &.highlight {
                 color: #FFC709;
+                
+                &:hover {
+                    border-bottom-color: inherit;
+                }
             }
         }
     }
