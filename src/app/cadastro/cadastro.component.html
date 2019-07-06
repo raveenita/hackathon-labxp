@@ -1,0 +1,87 @@
+<header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <img class="header__logo" src="assets/images/logo.png" alt="Você XP">
+        </div>
+      </div>
+    </div>
+  </header>
+
+<section class="blQock__register">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+          <form class="form__register">
+            <div>
+              <img (click)='selectTabMinus();' class='setaVoltarCad' src='assets/images/icon-back.svg'>
+            </div>
+            <mat-tab-group [selectedIndex]="selectedIndex"> 
+              <mat-tab label="First">
+                <div class="form__question"> 
+                  <label class="input-label" for="name">Queremos conhecer você. Qual seu nome?</label>
+                  <div class="input-field"> 
+                      <input id="last_name" [(ngModel)]='nome' name='nome' type="text" class="validate">
+                      <label for="last_name">Nome completo</label>
+                  </div> 
+                </div>
+              </mat-tab> 
+              <mat-tab label="Second">
+                <div class="form__question">
+                  <label class="input-label" for="name">Oi, {{nome}}. Qual seu CPF?</label>
+                  <div class="input-field"> 
+                      <input id="last_name" name='cpf' [(ngModel)]='cpf' type="text" class="validate">
+                      <label for="last_name">Somente números</label>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Third">
+                <div class="form__question">
+                  <label class="input-label" for="name">Digite sua data de nascimento: </label>
+                  <div class="input-field">
+                      <input id="last_name" name='dtNasc' [(ngModel)]='dtNasc' type="text" class="validate">
+                      <label for="last_name">Somente números</label>
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="Forth">
+                  <div class="form__question">
+                    <label class="input-label" for="name">{{nome}}, com qual gênero você se identifica? </label>
+                    <div class="input-field">
+                        <input id="last_name" name='genero' [(ngModel)]='genero' type="text" class="validate">
+                        <label for="last_name">Somente números</label>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Fifth">
+                    <div class="form__question">
+                      <label class="input-label" for="name">Digite sua senha: </label>
+                      <div class="input-field">
+                          <input id="last_name" name='senha' [(ngModel)]='senha' type="password" class="validate passCad">
+                          <label for="last_name"></label>
+                      </div>
+                    </div>
+                  </mat-tab>
+                  <mat-tab label="Sixth">
+                      <div class="form__question">
+                        <label class="input-label" for="name">Por favor, digite sua senha novamente</label>
+                        <div class="input-field">
+                            <input id="last_name" name='senhaRevalid' [(ngModel)]='senhaRevalid' type="password" class="validate passCadRevalid">
+                            <label for="last_name">As senhas devem ser iguais.</label>
+                        </div>
+                      </div>
+                    </mat-tab>
+                    <mat-tab label="Seventh">
+                        <div class="form__question">
+                          <label class="input-label" for="name">Legal, {{nome}}. <br/> Agora vamos começar a sua imersão.. :) </label>
+                        </div>
+                      </mat-tab>
+            </mat-tab-group>
+            <div class="form__actions">
+              <button type='button' (click)='selectTab();' class="btn btn-forward">Avançar</button>
+            </div>
+          </form>        
+      </div>
+    </div>
+  </div>
+</section>
