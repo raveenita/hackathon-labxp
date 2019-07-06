@@ -26,15 +26,83 @@
                   <div>
                       <img (click)='selectTabMinus();' class='setaVoltarCad' src='assets/images/icon-back.svg'>
                   </div>
-
-                  <div class="form__question"> 
-                    <label class="input-label" for="name">Queremos conhecer você. Qual seu nome?</label>
-                      <div class="input-field"> 
-                          <span class="tag">Comprar um app</span>
-                          <span class="tag">Comprar um app</span>
-                      </div>
-                  </div> 
-
+                  <mat-tab-group [selectedIndex]="selectedIndex">
+                    <mat-tab label="First">
+                      <div class="form__question"> 
+                        <label class="input-label" for="name">Porque você gostaria de investir?</label>
+                          <div class="input-field"> 
+                              <button type="button" (click)='addClassClk($event);' class="tag">Comprar um app</button>
+                              <button type="button" (click)='addClassClk($event);' class="tag">Fazer uma viagem</button>
+                              <button type="button" (click)='addClassClk($event);' class="tag">Trocar de carro</button>
+                          </div>
+                          <div class="input-field"> 
+                              <button type="button" (click)='addClassClk($event);' class="tag">Juntar uma grana</button>
+                              <button type="button" (click)='addClassClk($event);' class="tag">Pagar um curso ou uma faculdade</button>
+                              <button type="button" (click)='addClassClk($event);' class="tag">Morar sozinha</button>
+                          </div>
+                          <div class="input-field"> 
+                              <button type="button" (click)='addClassClk($event);' class="tag">Fazer uma previdência</button>
+                              <button type="button" (click)='addClassClk($event);' class="tag">Ainda não sei direito</button>
+                          </div>
+                      </div> 
+                    </mat-tab>
+                    <mat-tab label="Second">
+                        <div class="form__question"> 
+                          <label class="input-label" for="name">Ao investir o seu dinheiro, o que é mais importante?</label>
+                            <div class="input-field flexMiddle"> 
+                                <button type="button" (click)='addClassClk($event);' class="tag">Rendimento</button>
+                                <span>OU</span>
+                                <button type="button" (click)='addClassClk($event);' class="tag">Segurança</button>
+                            </div>
+                        </div> 
+                      </mat-tab>
+                      <mat-tab label="Third">
+                            <div class="form__question">
+                                <label class="input-label" for="name">Qual sua renda mensal? Isso vai ajudar a gente a escolher algo personalizado para você!</label>
+                                <div class="input-field">
+                                    <input id="last_name" name='renda' [(ngModel)]='renda' type="number" class="validate">
+                                    <label for="last_name">Fique tranquilo, só nós saberemos :)</label>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Fourth">
+                            <div class="form__question"> 
+                              <label class="input-label" for="name">Porque você gostaria de investir?</label>
+                                <div class="input-field"> 
+                                    <button type="button" (click)='addClassClk($event);' class="tag">Comprar um app</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">Fazer uma viagem</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">Trocar de carro</button>
+                                </div> 
+                                <div class="input-field"> 
+                                    <button type="button" (click)='addClassClk($event);' class="tag">Juntar uma grana</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">Pagar um curso ou uma faculdade</button>
+                                </div>
+                            </div> 
+                          </mat-tab>
+                          <mat-tab label="Fifth">
+                              <div class="form__question"> 
+                                <label class="input-label" for="name">Maravilhoso, quando você pensa em investir?</label>
+                                <div class="input-field"> 
+                                    <button type="button" (click)='addClassClk($event);' class="tag">10 anos</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">9 anos</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">8 anos</button>
+                                    <button type="button" (click)='addClassClk($event);' class="tag">7 ano</button>
+                                </div>  
+                                <div class="input-field"> 
+                                      <button type="button" (click)='addClassClk($event);' class="tag">6 anos</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">5 anos</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">4 ano</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">3 ano</button>
+                                  </div> 
+                                  <div class="input-field"> 
+                                      <button type="button" (click)='addClassClk($event);' class="tag">1 meses</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">6 meses</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">3 meses</button>
+                                      <button type="button" (click)='addClassClk($event);' class="tag">Ainda não sei :(</button>
+                                  </div>
+                              </div> 
+                            </mat-tab>
+                  </mat-tab-group>
                   <div class="form__actions">
                       <button type='button' (click)='selectTab();' class="btn btn-forward">Avançar</button>
                     </div>

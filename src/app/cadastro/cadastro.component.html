@@ -19,7 +19,7 @@
             <mat-tab-group [selectedIndex]="selectedIndex"> 
               <mat-tab label="First">
                 <div class="form__question"> 
-                  <label class="input-label" for="name">Queremos conhecer você. Qual seu nome?</label>
+                  <label class="input-label" for="name">Olá, queremos conhecer você. Qual seu nome?</label>
                   <div class="input-field"> 
                       <input id="last_name" [(ngModel)]='nome' name='nome' type="text" class="validate">
                       <label for="last_name">Nome completo</label>
@@ -37,16 +37,16 @@
               </mat-tab>
               <mat-tab label="Third">
                 <div class="form__question">
-                  <label class="input-label" for="name">Digite sua data de nascimento: </label>
+                  <label class="input-label" for="name">Enviamos um código para seu e-mail: </label>
                   <div class="input-field">
                       <input id="last_name" name='dtNasc' [(ngModel)]='dtNasc' type="text" class="validate">
-                      <label for="last_name">Somente números</label>
+                      <label for="last_name">EX: C4SF3Q1D</label>
                   </div>
                 </div>
               </mat-tab>
               <mat-tab label="Forth">
                   <div class="form__question">
-                    <label class="input-label" for="name">{{nome}}, com qual gênero você se identifica? </label>
+                    <label class="input-label" for="name">{{nome}}, Qual a sua idade? </label>
                     <div class="input-field">
                         <input id="last_name" name='genero' [(ngModel)]='genero' type="text" class="validate">
                         <label for="last_name">Somente números</label>

@@ -59,7 +59,7 @@ export class CadastroComponent implements OnInit {
         this.selectedIndex += 1;
         document.getElementsByClassName('setaVoltarCad')[0].style.opacity = "1";
       }else{
-        alert('Poxa, eu disse que manteria segredo!');
+        alert('Abre o e-mail aí, é rapidinho.');
       }
     }
     
