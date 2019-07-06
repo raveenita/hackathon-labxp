@@ -1,0 +1,167 @@
+.header {
+    border-top: 11px solid #FFC709;
+
+    .header__wrapper {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        
+        .header__info {
+            font-size: 22px;
+            color: #394148;
+            display: flex;
+            align-content: center;
+        }
+
+        .header__icon {
+            margin-left: 20px;
+            
+            img {
+                width: 37px;
+            }
+        }
+    }
+}
+
+
+.section__investimentos {
+    display: flex;
+    margin-bottom: 65px;
+    align-content: center;
+    justify-content: center;
+    
+    .box {
+        width: 340px;
+        z-index: 1;
+        border-radius: 19px;
+        border: 1px solid #AAA;
+        transition: all .3s;
+        
+        &:hover {
+            box-shadow: 0 0 20px #f2f2f2;
+            transform: translateY(10px);
+
+            img {
+                opacity: .9;
+            }
+        }
+        
+        .box__percent,
+        .box_percent {
+            height: 100%;
+            display: flex;
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            font-size: 62px;
+            font-weight: bold;
+            z-index: 22;
+        }
+        
+        .box__image {
+            z-index: 1;
+            height: 210px;
+            position: relative;
+            
+            img {
+                top: 0;
+                left: 0;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: all .4s;
+            }
+        }
+        
+        
+        
+        &:not(:last-child){
+            margin-right: 90px;
+        }
+    }
+    
+    .box__content {
+        padding: 25px;
+        color: #394148;
+        
+        .box__title {
+            font-size: 29px;
+            margin-top: 25px;
+        }
+        .box__description {
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+.section__planejamento,
+.section__sonho {
+    h2 {
+        font-size: 42px;
+        color: #394148;
+    }
+
+    .box__wrapper {
+        display: flex;
+        flex: 2;
+        align-content: center;
+        justify-content: center;
+        
+        .box {
+
+            font-size: 30px;
+            line-height: 24px;
+            
+            .box__price {
+                font-weight: bold;   
+            }
+            
+            &.highlight {
+                color: #09C2FF;
+            }
+
+            &:not(:last-child){
+                margin-right: 130px;
+            }
+            
+            .box__title {
+                font-size: 30px;
+                line-height: 18px;
+            }
+        }
+    }
+}
+
+.section__planejamento {
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid #707070;
+}
+
+.section__steps {
+    width: 100%;
+    margin-top: 85px;
+    padding: 40px 80px;
+    text-align: right;
+    
+    border-top: 1px solid #D1D5D8;
+    background-color: #fff;
+
+    .btn-forward {
+        background-color: #394148;
+        font-size: 16px;
+        box-shadow: none;
+        border-radius: 20px;
+        font-family: "Roboto";
+        text-transform: none;
+        font-weight: 500;
+        padding: 0 30px;
+
+        &:hover {
+            background-color: darken(#394148, 5%);
+        }
+    }
+}
