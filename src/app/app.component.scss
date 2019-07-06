@@ -1,0 +1,47 @@
+.form__question {
+
+    .input-label {
+        margin-bottom: 30px;
+    }
+
+    .input-field {
+        & > label {
+            color: #657687;
+            font-size: 19px;  
+        }
+    }
+
+    input {
+        
+        border-bottom-color: #CDD6DB;
+
+        &:focus {
+            box-shadow: none;
+            border-bottom-color: #FFC709;
+        }
+    }
+}
+.form__actions {
+
+    padding: 45px 75px;
+    
+
+    .btn {
+        font-size: 16px;
+        box-shadow: none;
+        border-radius: 20px;
+        font-family: "Roboto";
+        text-transform: none;
+        font-weight: 500;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    
+    .btn-forward {
+        background-color: #FFC709;
+
+        &:hover {
+            background-color: darken(#FFC709, 5%);
+        }
+    }
+}
