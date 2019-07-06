@@ -18,7 +18,7 @@
         position: fixed;
         padding: 58px 40px;
         text-align: right;
-        border: 1px solid #D1D5D8;
+        border-top: 1px solid #D1D5D8;
         background-color: #fff;
     }
     
@@ -37,8 +37,9 @@
     font-family: "Roboto";
     text-transform: none;
     font-weight: 500;
+    border-radius: 20px;
 
-    &-forward {
+    &.btn-forward {
         background-color: #FFC709;
     }
 }
