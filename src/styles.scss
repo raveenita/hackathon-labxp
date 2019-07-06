@@ -1,3 +1,7 @@
+html, body {
+    font-family: "Roboto";
+}
+
 .header {
     padding: 25px;
 }
@@ -37,9 +41,8 @@
     font-family: "Roboto";
     text-transform: none;
     font-weight: 500;
-    border-radius: 20px;
+}
 
-    &.btn-forward {
-        background-color: #FFC709;
-    }
+.btn-forward {
+    background-color: #FFC709;
 }
